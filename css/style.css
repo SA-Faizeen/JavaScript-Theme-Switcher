@@ -1,15 +1,17 @@
 /* Browser default reset */
 * {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	box-sizing: border-box;
 }
+
 a,
 a:hover {
-  text-decoration: none;
-  display: inline-block;
+	text-decoration: none;
+	display: inline-block;
 }
+
 h1,
 h2,
 h3,
@@ -17,13 +19,25 @@ h4,
 h5,
 h6,
 p {
-  margin: 0;
-  padding: 0;
-  line-height: 0.8;
+	margin: 0;
+	padding: 0;
+	line-height: 0.8;
 }
+
 ul,
 ol {
-  list-style-type: none;
+	list-style-type: none;
+}
+
+:root {
+	--bg-primary: #f7f7f7;
+	--border-color: #000;
+	--text-color: #000;
+}
+
+body {
+	color: var(--text-color);
+	transition: all 300ms ease;
 }
 
 /* main styling */
@@ -31,8 +45,20 @@ ol {
 	width: 100%;
 	height: 100vh;
 	display: flex;
+	flex-direction: column;
+	gap: 1em;
 	justify-content: center;
 	align-items: center;
+}
+
+.container::before {
+	z-index: -1;
+	content: "";
+	width: 100%;
+	height: 0;
+	background-color: #14181e;
+	position: absolute;
+	transition: height 1s ease;
 }
 
 .outer {
@@ -41,10 +67,10 @@ ol {
 	background-color: #d2d2d2;
 	border-radius: 50px;
 	transition: all 300ms ease;
-	border: 1px solid black;
+	border: 1px solid var(--border-color);
 }
 
-.switch	{
+.switch {
 	position: absolute;
 	background-color: white;
 	padding: 1em;
@@ -55,10 +81,20 @@ ol {
 	transition: all 300ms ease;
 }
 
-.on.switch {
-	left: 50%;
+.switch.on {
+	left: 32px;
 }
 
 .outer.on {
 	background-color: lime;
+}
+
+.on {
+	--bg-primary: #14181e;
+	--border-color: white;
+	--text-color: white;
+}
+
+.on .container::before {
+	height: 100%;
 }
