@@ -12,8 +12,8 @@
 }
 
 .on {
-  --border-color: #ffffff;
-  --text-color: #ffffff;
+  --border-color: contrast-color(var(--bg-dark));
+  --text-color: contrast-color(var(--bg-dark));
 }
 
 body {
