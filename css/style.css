@@ -49,6 +49,7 @@ body {
   border: 1px solid var(--border-color);
   transition-property: background-color border-color;
   transition-duration: 300ms;
+  cursor: pointer;
   &.on {
     background-color: lime;
   }
