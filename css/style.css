@@ -1,4 +1,4 @@
- * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -32,7 +32,6 @@ body {
   justify-content: center;
   align-items: center;
   isolation: isolate;
-
   & span {
     font-size: 1rem;
     text-align: center;
@@ -49,6 +48,7 @@ body {
   border: 1px solid var(--border-color);
   transition-property: background-color border-color;
   transition-duration: 300ms;
+  cursor: pointer;
   &.on {
     background-color: lime;
   }
@@ -60,7 +60,7 @@ body {
   background-color: #ffffff;
   border-radius: 50%;
   transition: transform 300ms;
-	cursor: pointer;
+  cursor: pointer;
   &.on {
     transform: translateX(32px);
   }
